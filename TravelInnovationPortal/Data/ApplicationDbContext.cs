@@ -12,5 +12,6 @@ namespace TravelInnovationPortal.Data
         }
 
         public DbSet<Idea> Ideas { get; set; }
+        public DbSet<Service> Services { get; set; }
     }
 }

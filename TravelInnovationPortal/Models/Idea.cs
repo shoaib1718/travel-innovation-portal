@@ -15,6 +15,8 @@ namespace TravelInnovationPortal.Models
         [Required]
         public string ServiceName { get; set; } = string.Empty;
 
+        public int ServiceId { get; set; }
+
         [Required]
         public string IdeaTitle { get; set; } = string.Empty;
 

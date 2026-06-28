@@ -1,0 +1,50 @@
+﻿@page
+@model TravelInnovationPortal.Pages.Ideas.CreateModel
+
+@{
+    ViewData["Title"] = "Submit Idea";
+}
+
+<h2>Travel Innovation Portal</h2>
+
+@if (!string.IsNullOrEmpty(Model.SuccessMessage))
+{
+    <div class="alert alert-success">
+        @Model.SuccessMessage
+    </div>
+}
+
+<form method="post">
+
+    <div class="mb-3">
+        <label class="form-label">Service</label>
+
+        <select asp-for="Idea.ServiceId"
+                asp-items="Model.Services"
+                class="form-select">
+            <option value="">-- Select Service --</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Idea Title</label>
+
+        <input asp-for="Idea.IdeaTitle"
+               class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Description</label>
+
+        <textarea asp-for="Idea.IdeaDescription"
+                  class="form-control"
+                  rows="5">
+        </textarea>
+    </div>
+
+    <button type="submit"
+            class="btn btn-primary">
+        Submit Idea
+    </button>
+
+</form>
