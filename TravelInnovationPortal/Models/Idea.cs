@@ -7,19 +7,19 @@ namespace TravelInnovationPortal.Models
         public int Id { get; set; }
 
         [Required]
-        public string EmployeeName { get; set; }
+        public string EmployeeName { get; set; } = string.Empty;
 
         [Required]
-        public string EmployeeEmail { get; set; }
+        public string EmployeeEmail { get; set; } = string.Empty;
 
         [Required]
-        public string ServiceName { get; set; }
+        public string ServiceName { get; set; } = string.Empty;
 
         [Required]
-        public string IdeaTitle { get; set; }
+        public string IdeaTitle { get; set; } = string.Empty;
 
         [Required]
-        public string IdeaDescription { get; set; }
+        public string IdeaDescription { get; set; } = string.Empty;
 
         public DateTime CreatedDate { get; set; }
     }
