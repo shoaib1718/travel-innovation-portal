@@ -1,10 +1,72 @@
 ﻿@page
 @model IndexModel
+
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Travel Innovation Portal";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <h1 class="display-4">
+        Travel Innovation Portal
+    </h1>
+
+    <p>
+        Submit innovative ideas and improve travel services.
+    </p>
+
+</div>
+
+<hr />
+
+<div class="row">
+
+    <div class="col-md-6">
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <h3>Total Ideas</h3>
+
+                <h2>@Model.TotalIdeas</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <h3>Total Services</h3>
+
+                <h2>@Model.TotalServices</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<br />
+
+<div>
+
+    <a asp-page="/Ideas/Create"
+       class="btn btn-primary">
+        Submit New Idea
+    </a>
+
+    <a asp-page="/Ideas/List"
+       class="btn btn-success">
+        View Ideas
+    </a>
+
 </div>
